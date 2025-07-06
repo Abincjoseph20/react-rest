@@ -1,0 +1,30 @@
+import React,{useState,useEffect} from react
+import axios from 'axios'
+
+
+function BookList(){
+
+    const [book,seBooks]=useState('')
+    const [edit,setEdit]=useState(null)
+    const [title,setTitle]=useState('')
+    const [img,setImg]=useState(null)
+
+    const fetchData = async () =>{
+        const res=awit axios.get('http://8000/api/books/')
+        seBooks(res.data)
+    }
+
+    useEffect(()=>{
+        fetchData()
+    },[])
+
+    const deleteData = async (id)=>{
+        awit axios.delete(`http://8000/api/book/${id}/`)
+        fetchData()
+    }
+
+
+
+}
+
+export defalt BookList;

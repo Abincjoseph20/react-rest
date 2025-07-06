@@ -1,0 +1,46 @@
+import React,{useState},from react
+import axios from 'axios'
+
+function BookFunct(){
+
+	const [title,SetTitle]=useState('');
+	const [img,SetImg] =useState(null);
+
+	const formSubmit = async(e)=> {
+		e.preventdefalt();
+
+		const formsdata = new FormData()
+		formsdata.appent('title':title),
+		if(img){
+			formdata.append('img',img)
+			}
+		}
+	aswnc axios.post("https//:8000/api/books/",formdats,{
+	heareds = {'content-tyoe':multipart/formdata'}
+
+	alert('added succes')
+	setTitle('')
+	setImg(null)
+})
+}
+
+retur(
+<form onChange={formSubmi}>
+	<input
+	type='text'
+	value="title"
+	placeholder="title"
+	onChange={(e)=>settitle(e.target.value)}
+	>
+
+	<input
+	type='file'
+	accept='img'
+	onChange={(e)=>settitle(e.target.files[0])}
+	>
+
+	<button type="submit">click me</button>
+</>
+)
+
+export defalt Bookfunc;
