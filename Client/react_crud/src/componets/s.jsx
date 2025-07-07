@@ -83,7 +83,7 @@ function BookList(){
                         <td><input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} /></td>
                         <td><input type="text" value={author} onChange={(e)=>setAuthor(e.target.value)} /></td>
                         <td><input type="text" value={description} onChange={(e)=>setDescription(e.target.value)} /></td>
-                        <td><input type="file"  onChange={(e)=>setImage(e.target.files[0])} /></td>
+                        <td><input type="file" accept="image/*" onChange={(e)=>setImage(e.target.files[0])} /></td>
 
 
                         <td onClick={handleUpdate}>save.</td>
@@ -95,6 +95,7 @@ function BookList(){
                         <td>{book.author}</td>
                         <td>{book.description}</td>
                         <td>{book.image && <img src={book.image} width="100" height="100"></img> }</td>
+                        
 
 
                         <td><a onClick={()=>HandleDelete(book.id)}>delete</a></td>

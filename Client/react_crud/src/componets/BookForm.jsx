@@ -46,7 +46,7 @@ function BookForm() {
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         required
-      /><br /><br />
+      /> <br /><br />
 
       <textarea
         placeholder="Description"
